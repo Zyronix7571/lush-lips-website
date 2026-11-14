@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fffaf8">
+  <title>LUSH LIPS by Rashi | Makeup & Beauty</title>
+  <meta name="description" content="Explore the makeup looks, beauty creativity and work of LUSH LIPS by Rashi.">
+  <style>
+    :root{
+      --ink:#302725; --muted:#796d69; --rose:#b77d78; --rose-dark:#8f5b58;
+      --gold:#b99a69; --cream:#fffaf8; --blush:#f7eeeb; --line:#eadbd6;
+      --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,90%);margin:auto}
+    .topline{height:3px;background:linear-gradient(90deg,#d8bca0,#a86e6a,#d8bca0)}
+    header{position:sticky;top:0;z-index:5;background:rgba(255,250,248,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;letter-spacing:3px;font-size:22px;color:var(--rose-dark);font-weight:bold}
+    .brand small{display:block;font:9px Arial,sans-serif;letter-spacing:3px;color:var(--gold);text-align:center;margin-top:2px}
+    nav{display:flex;gap:27px;align-items:center;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#625653}
+    nav a:hover{color:var(--rose-dark)}
+    .nav-cta,.button{display:inline-block;background:var(--rose-dark);color:white;padding:12px 19px;border-radius:2px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;transition:.2s}
+    .nav-cta:hover,.button:hover{background:#704541;transform:translateY(-1px)}
+    .menu{display:none;background:none;border:1px solid var(--line);padding:8px 11px;color:var(--rose-dark);font-size:20px}
+    .hero{padding:76px 0 70px;background:radial-gradient(ellipse at 80% 20%,#f3e5e1 0,transparent 42%),linear-gradient(115deg,#fffaf8,#f8efec)}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+    .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:bold}
+    h1{font:clamp(48px,7vw,82px)/.98 Georgia,serif;letter-spacing:1px;color:var(--rose-dark);margin:18px 0}
+    h1 span{display:block;font-style:italic;color:var(--ink);font-size:.62em;margin-top:12px}
+    .hero p{max-width:470px;color:var(--muted);font-size:15px;margin:20px 0 28px}
+    .hero-art{min-height:440px;position:relative;display:grid;place-items:center}
+    .art-frame{width:min(390px,90%);height:430px;border:1px solid #d9c2ad;padding:12px;position:relative;background:#fff}
+    .art-inner{height:100%;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(112,65,60,.12)),radial-gradient(ellipse at 50% 35%,#f8d9d1 0 18%,transparent 19%),linear-gradient(145deg,#ead4cc,#c38d84 55%,#8e5e5b);display:flex;align-items:end;justify-content:center;overflow:hidden}
+    .art-inner:before{content:"";width:190px;height:280px;border-radius:48% 48% 38% 38%;background:linear-gradient(90deg,#f1c9bb,#f9ded3 48%,#d9a99b);box-shadow:inset -18px -4px 25px #b77d7860;transform:translateY(42px);opacity:.9}
+    .art-caption{position:absolute;bottom:30px;left:-25px;background:#fffaf8;padding:17px 23px;box-shadow:0 12px 35px #6d4c3a18;font:italic 18px Georgia,serif;color:var(--rose-dark)}
+    .section{padding:82px 0}
+    .section-head{text-align:center;margin-bottom:42px}
+    .section-head h2{font:clamp(34px,5vw,48px) Georgia,serif;color:var(--rose-dark);margin:8px 0}
+    .section-head p{color:var(--muted);font-size:14px;margin:0 auto;max-width:550px}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:center}
+    .about-card{background:var(--blush);padding:38px;border:1px solid var(--line)}
+    .monogram{width:100%;min-height:290px;display:grid;place-items:center;background:linear-gradient(145deg,#f5e7e2,#e6cfc8);color:var(--rose-dark);font:italic 76px Georgia,serif}
+    .about-copy h2{font:42px Georgia,serif;color:var(--rose-dark);margin:10px 0}
+    .about-copy p{color:var(--muted);font-size:15px}
+    .gallery{background:#fff}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery-item{min-height:300px;background:linear-gradient(145deg,#f2e2dc,#d9b8ad);position:relative;overflow:hidden;border:1px solid var(--line)}
+    .gallery-item:nth-child(2){background:linear-gradient(145deg,#e8d7ce,#b9897d)}
+    .gallery-item:nth-child(3){background:linear-gradient(145deg,#f4e9e3,#d8c0b3)}
+    .gallery-item:nth-child(4){background:linear-gradient(145deg,#ead9d4,#bd8c84)}
+    .gallery-item:nth-child(5){background:linear-gradient(145deg,#f3e7df,#cda99c)}
+    .gallery-item:nth-child(6){background:linear-gradient(145deg,#e8d6d0,#a97670)}
+    .gallery-item:before{content:"YOUR MAKEUP PHOTO";position:absolute;inset:0;display:grid;place-items:center;color:#fff9;font-size:11px;letter-spacing:3px}
+    .gallery-item span{position:absolute;bottom:0;left:0;right:0;padding:17px;color:white;background:linear-gradient(transparent,#35221f99);font:italic 19px Georgia,serif}
+    .video-box{background:var(--blush);border:1px solid var(--line);padding:34px;text-align:center;max-width:760px;margin:auto}
+    .play{width:62px;height:62px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;color:var(--rose-dark);font-size:22px}
+    .video-box p{color:var(--muted);font-size:14px}
+    .contact{background:linear-gradient(120deg,#f6ebe7,#fffaf8);text-align:center}
+    .contact h2{font:clamp(38px,5vw,54px) Georgia,serif;color:var(--rose-dark);margin:10px 0}
+    .contact p{color:var(--muted);max-width:540px;margin:0 auto 25px}
+    footer{padding:28px 0;text-align:center;color:#897b75;font-size:11px;letter-spacing:1px;border-top:1px solid var(--line)}
+    footer strong{font-family:Georgia,serif;color:var(--rose-dark);letter-spacing:2px}
+    @media(max-width:760px){
+      .nav{height:68px}nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:18px}
+      nav.open{display:flex}.menu{display:block}.nav-cta{display:none}
+      .hero{padding:52px 0}.hero-grid,.about-grid{grid-template-columns:1fr;gap:25px}.hero-art{min-height:350px}.art-frame{height:340px}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-item{min-height:220px}
+      .section{padding:60px 0}.about-card{padding:20px}
+    }
+    @media(max-width:420px){.gallery-grid{grid-template-columns:1fr}.gallery-item{min-height:280px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">LUSH LIPS<small>BY RASHI</small></a>
+      <nav id="nav">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#videos">Videos</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="https://www.instagram.com/lushlips_by_rashi/" target="_blank" rel="noopener">Instagram</a>
+      <button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Makeup • Beauty • Creativity</div>
+          <h1>LUSH LIPS<span>Beauty, in every detail.</span></h1>
+          <p>A little space to explore makeup looks, creative beauty ideas and the work I love creating. Welcome to my beauty world.</p>
+          <a class="button" href="#gallery">Explore my work</a>
+        </div>
+        <div class="hero-art">
+    <img src="./Images/logo.png" alt="LUSH LIPS Logo" class="hero-logo">
+</div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <img src="./Images/rashi.jpeg" alt="Rashi" class="about-photo">
+        <div class="about-copy">
+          <div class="eyebrow">A little about me</div>
+          <h2>Hello, I'm Rashi.</h2>
+          <p>Welcome to LUSH LIPS — my personal space for makeup, beauty and creativity. I love experimenting with looks, sharing the results and learning something new with every creation.</p>
+          <p>This is where you can discover my work and follow my beauty journey.</p>
+          <a class="button" href="https://www.instagram.com/lushlips_by_rashi/" target="_blank" rel="noopener">Follow my journey</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">The beauty gallery</div><h2>My Makeup Looks</h2><p>A collection of looks and creations. Your own photos can be added here.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+    <img src="./Images/photo1.png" alt="Makeup Look 1">
+</div>
+<div class="gallery-item">
+    <img src="./Images/photo2.png" alt="Makeup Look 2">
+</div>
+<div class="gallery-item">
+    <img src="./Images/photo3.png" alt="Makeup Look 3">
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="wrap">
+        <div class="video-item">
+    <video controls preload="metadata">
+        <source src="./Videos/Video1.mp4" type="video/mp4">
+    </video>
+</div>
+
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="eyebrow">Let's connect</div><h2>Stay in touch</h2>
+        <p>Want to see more looks and beauty updates? Visit my Instagram and be part of the LUSH LIPS journey.</p>
+        <a class="button" href="https://www.instagram.com/lushlips_by_rashi/" target="_blank" rel="noopener">Visit @lushlips_by_rashi</a>
+<p class="contact-number">
+    Contact: <a href="tel:+916265570957">+91 62655 70957</a>
+</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><strong>LUSH LIPS BY RASHI</strong><br>Beauty • Makeup • Creativity<br><br>© <span id="year"></span> LUSH LIPS. All rights reserved.</div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
