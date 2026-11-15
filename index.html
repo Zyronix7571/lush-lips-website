@@ -84,10 +84,19 @@
     object-fit: contain;
     display: block;
 }
+#videos .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+#videos .video-item {
+    width: 45%;
+}
 .video-item video {
     width: 100%;
-    max-width: 450px;
+    max-width: 100%;
     height: auto;
     max-height: 350px;
     object-fit: contain;
@@ -178,6 +187,26 @@ p, a, li {
 <div class="gallery-item">
     <img src="./Images/photo3.png" alt="Makeup Look 3">
 </div>
+<div class="gallery-item">
+    <img src="./Images/photo4.png" alt="Makeup Look 4">
+</div>
+<div class="gallery-item">
+    <img src="./Images/photo5.png" alt="Makeup Look 5">
+</div>
+<div class="gallery-item">
+    <img src="./Images/photo6.png" alt="Makeup Look 6">
+</div>
+<div class="gallery-item">
+    <img src="./Images/photo7.png" alt="Makeup Look 7">
+</div>
+
+<div class="gallery-item">
+    <img src="./Images/photo8.png" alt="Makeup Look 8">
+</div>
+
+<div class="gallery-item">
+    <img src="./Images/photo9.png" alt="Makeup Look 9">
+</div>
         </div>
       </div>
     </section>
@@ -189,7 +218,16 @@ p, a, li {
         <source src="./Videos/Video1.mp4" type="video/mp4">
     </video>
 </div>
-
+    <div class="video-item">
+    <video controls preload="metadata">
+        <source src="./Videos/Video2.mp4" type="video/mp4">
+    </video>
+</div>
+    <div class="video-item">
+    <video controls preload="metadata">
+        <source src="./Videos/Video3.mp4" type="video/mp4">
+    </video>
+</div>
       </div>
     </section>
 
